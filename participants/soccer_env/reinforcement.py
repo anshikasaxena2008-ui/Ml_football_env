@@ -298,6 +298,10 @@ def reinforcement_reward(
     kick = action.get("kick")
     if isinstance(kick, dict):
         kick_vector = DIRECTION_VECTORS.get(str(kick.get("direction")), (0, 0))
-        if sign * kick_vector[1] <= 0:
-            reward -= 1.5
+        kick = action.get("kick")
+        if isinstance(kick, dict):
+            kick_vector = DIRECTION_VECTORS.get(str(kick.get("direction")), (0, 0))
+            if sign * kick_vector[1] <= 0:
+                reward -= 0.3
     return reward
+

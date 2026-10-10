@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Neutral XI",
+    "command":  [
+                    "python",
+                    "-m",
+                    "team_bot.bot",
+                    "--model",
+                    "team_bot/models/rl_1000_v3.json"
+                ]
+}
